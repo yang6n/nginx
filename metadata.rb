@@ -7,3 +7,5 @@ version           '2.99.0'
 
 issues_url 'https://github.com/miketheman/nginx/issues'
 source_url 'https://github.com/miketheman/nginx'
+
+depends 'yum-epel'
