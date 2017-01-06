@@ -2,6 +2,8 @@ source 'https://supermarket.chef.io'
 
 metadata
 
+cookbook 'yum-epel'
+
 group :integration do
   cookbook 'apt', '~> 2.6.1'
 
