@@ -2,6 +2,14 @@
 # This should serve as a simple guide of how to use the resource to set up nginx.
 # See more in the README.md and in test/fixtures/cookbooks for more examples.
 
+yum_repository 'epel' do
+    mirrorlist 'http://mirrors.fedoraproject.org/mirrorlist?repo=epel-5&arch=$basearch'
+    description 'Extra Packages for Enterprise Linux 5 - $basearch'
+    enabled true
+    gpgcheck true
+    gpgkey 'http://dl.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL'
+end
+
 nginx_service 'example'
 
 root_dir = '/var/www/example'
